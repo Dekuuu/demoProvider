@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 1.12.219.137:31048
+        server-addr: ${NACOS_SERVER}
         file-extension: properties
         namespace: 6d7ab29c-7da9-488c-a319-0f4219de7b1c
         group: dev
