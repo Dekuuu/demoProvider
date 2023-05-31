@@ -3,15 +3,19 @@ package com.demo.provider.entity.result;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.demo.provider.annotation.EncryptTransaction;
+import com.demo.provider.annotation.SensitiveData;
 import lombok.Data;
 
 @Data
 @TableName(value = "users")
+@SensitiveData
 public class User {
 
     @TableId(type = IdType.AUTO)
     private Integer id;
     private String userName;
+    @EncryptTransaction
     private String userPassword;
     private int age;
 
